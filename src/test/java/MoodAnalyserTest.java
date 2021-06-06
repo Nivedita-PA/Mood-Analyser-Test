@@ -4,21 +4,21 @@ import org.junit.Test;
 public class MoodAnalyserTest {
 
     @Test
-    public void givenMood_whenSad_ShouldReturnSad() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("This is a sad message");
-        String mood = moodAnalyser.analyseMood();
-        Assert.assertEquals("SAD", mood);
+    public void whengivenNullMood_In_Object_should_throwException() {
+        MoodAnalyser moodAnalyser2 = new MoodAnalyser(null);
+        try {
+            moodAnalyser2.analyseMood();
+        } catch (InvalidMoodException e) {
+            Assert.assertEquals(InvalidMoodException.ExceptionType.NULL_TYPE, e.type);
+        }
     }
     @Test
-    public void givenMood_whenNotSad_ShouldReturnHappy(){
-        MoodAnalyser moodAnalyserT = new MoodAnalyser("This is a happy message");
-        String mood = moodAnalyserT.analyseMood();
-        Assert.assertEquals("HAPPY", mood);
-    }
-    @Test
-    public void givenMood_whenNotNull_ShouldReturnHappy(){
-        MoodAnalyser moodAnalyserT = new MoodAnalyser(null);
-        String mood = moodAnalyserT.analyseMood();
-        Assert.assertEquals("HAPPY", mood);
+    public void whengivenEmptyMood_In_Object_should_throwException () {
+        MoodAnalyser moodAnalyser3 = new MoodAnalyser(" ");
+        try {
+            moodAnalyser3.analyseMood();
+        } catch (InvalidMoodException e) {
+            Assert.assertEquals(InvalidMoodException.ExceptionType.EMPTY_TYPE, e.type);
+        }
     }
 }
