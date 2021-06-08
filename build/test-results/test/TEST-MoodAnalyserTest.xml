@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MoodAnalyserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-06-06T19:44:50" hostname="DELL" time="0.005">
+  <properties/>
+  <testcase name="whengivenNullMood_In_Object_should_throwException" classname="MoodAnalyserTest" time="0.005"/>
+  <testcase name="whengivenEmptyMood_In_Object_should_throwException" classname="MoodAnalyserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
